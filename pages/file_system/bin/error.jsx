@@ -1,0 +1,1 @@
+module.exports = (data) => /*html*/ `<div class='stdout status-0'><span class='err'>Error:</span> Root is the absolute beginning of the filesystem</div>`

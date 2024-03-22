@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+.dark{
+    --sidebar-bg: rgba(52, 20, 0, 0.534);
+    --window-title-bar-bg: rgba(52, 20, 0, 0.2);
+    --window-bg: rgba(52, 20, 0, 0.534);
+    --text: white;
+}
+
+.light{
+    --sidebar-bg: rgba(220, 199, 186, 0.114);
+    --window-title-bar-bg: rgba(142, 105, 81, 0.2);
+    --window-bg: rgba(217, 169, 139, 0.179);
+    --text: rgb(255, 255, 255);
+}
+
+.filters{
+    --vignette-color: rgba(52, 20, 0, 0.534);
+    --sidebar-width: 60px;
+    --padding: 10px;
+    --contrast: 1.2;
+    --blur: 15px;
+
+    position: absolute;
+    height: calc(100% - 2 * var(--padding));
+    width: calc(100% - 2 * var(--padding));
+
+    display: grid;
+    grid-template-columns: var(--sidebar-width) auto;
+    padding: var(--padding);
+    gap: var(--padding);
+
+    background: radial-gradient(transparent, var(--vignette-color));
+}
+
+.desktop{
+    position: fixed;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.acrylic{
+    backdrop-filter: contrast(var(--contrast)) blur(var(--blur));
+}
+
+.focused{
+    box-shadow: 0 0 40px 10px #1a1a1a;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sidebar-bg);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.sidebar-button {
+    padding: 20px;
+    fill: var(--text);
+    cursor: pointer;
+
+    transition: 0.3s background-color;
+
+    &:hover, &.active-workspace-button{
+        background-color: var(--sidebar-bg);
+    }
+}
+
+.sidebar-bottom{
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+}
+
+.date-time{
+    color: var(--text);
+    margin-bottom: 20px;
+    font-family: "Orbitron", sans-serif;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+}

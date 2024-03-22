@@ -1,0 +1,123 @@
+.window{
+    --timing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--window-bg);
+    box-shadow: 0 0 40px 10px #1a1a1a31;
+    border-radius: 12px;
+    overflow: hidden;
+    color: var(--text);
+    top: 100px;
+    left: 100px;
+    scale: 1;
+
+    animation: animateWindowPopup 0.5s var(--timing) 0s normal;
+    transition: 0.3s box-shadow;
+}
+
+.window.maximized{
+    transition: 0.3s left ease-in-out, 0.3s top ease-in-out, 0.5s height var(--timing), 0.5s width var(--timing);
+    left: calc(2 * var(--padding)) !important;
+    top: calc(2 * var(--padding)) !important;
+    height: calc(100% - 4 * var(--padding)) !important;
+    width: calc(100% - 4 * var(--padding)) !important;
+    box-shadow: 0 0 15px 5px #1a1a1a !important;
+}
+
+@keyframes animateWindowPopup {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.window:focus, .window:hover, .window.active-window{
+    box-shadow: 0 0 40px 10px #1a1a1a;
+}
+
+.window.active-window{
+    z-index: 55;
+}
+
+.topbar{
+    background-color: var(--window-title-bar-bg);
+    border-top: 2px dashed rgba(226, 209, 209, 0.48);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: baseline;
+    padding: 0px 10px;
+    gap: 20px;
+    height: 40px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.topbar-item{
+    height: 100%;
+    line-height: 45px;
+}
+
+.contents{
+    position: relative;
+    height: calc(100% - 40px);
+    max-height: 100%;
+}
+
+.topbar-item.buttons{
+    min-width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.topbar-item.button{
+    height: 20px;
+    cursor: pointer;
+    aspect-ratio: 1;
+    overflow: hidden;
+    color: transparent;
+    line-height: 10px;
+    border-radius: 10px;
+    opacity: 0.7;
+    border: 2px solid transparent;
+    outline: none;
+    gap: 20px;
+
+    transition: 0.3s color, 0.3s opacity;
+
+    &:hover{
+        color: white;
+        opacity: 1;
+    }
+
+    &.close{
+        background-color: red;
+    }
+
+    &.minimize{
+        background-color: orange;
+    }
+
+    &.maximize{
+        background-color: limegreen;
+    }
+}
+
+.workspaces{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.workspace{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}

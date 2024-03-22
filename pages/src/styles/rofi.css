@@ -1,0 +1,85 @@
+.rofi{
+    --timing: cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: fixed;
+    z-index: 1000;
+    height: calc(100% - 4 * var(--padding));
+    width: calc(25% - 4 * var(--padding));
+    margin-top: calc(2 * var(--padding));
+    margin-left: -600px;
+    background-color: var(--sidebar-bg);
+    border-radius: 8px 20px 20px 8px;
+
+    display: grid;
+    grid-template-rows: 80px auto 80px;
+    gap: 20px;
+
+    transition: 0.5s margin-left var(--timing);
+    overflow: hidden;
+}
+
+.rofi.visible{
+    margin-left: calc(var(--sidebar-width) + 3 * var(--padding));
+}
+
+.rofi-entry{
+    background-color: var(--window-title-bar-bg);
+    border: 2px dashed var(--window-bg);
+    color: var(--text);
+    border-radius: 100px;
+    margin: 10px;
+    outline: none;
+    padding: 10px 20px;
+}
+
+.rofi-scrollable{
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.rofi-element{
+    background-color: var(--window-title-bar-bg);
+    border: 2px dashed transparent;
+    color: var(--text);
+    padding: 20px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+
+    transition: 0.3s border;
+
+    &:hover, &:focus{
+        border: 2px dashed var(--window-bg);
+    }
+}
+
+.rofi-shortcuts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.rofi-shortcut{
+    background-color: var(--window-title-bar-bg);
+    border: 2px dashed transparent;
+    fill: var(--text);
+    outline: none;
+    height: 100%;
+    border-radius: 40px;
+    aspect-ratio: 1;
+    padding: 20px;
+    cursor: pointer;
+
+    transition: 0.3s border;
+
+    &:hover, &:focus{
+        border: 2px dashed var(--window-bg);
+    }
+}
