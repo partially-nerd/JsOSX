@@ -1,7 +1,12 @@
 # JsOSX
 An operating system programmed in javascript
 
-<iframe width="2007" height="1012" src="https://www.youtube.com/embed/RqDsRFgdvI0" title="Proof of concept &quot;Operating System&quot; designed in javascript" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+# Gallery
+![image](https://github.com/partially-nerd/JsOSX/assets/108736691/3fa6384d-39ba-4ff1-be7e-62c8283d8e36)
+![image](https://github.com/partially-nerd/JsOSX/assets/108736691/7f1c124e-7031-478d-8035-94a8a45b1853)
+
+[![Youtube Video](http://img.youtube.com/vi/RqDsRFgdvI0/0.jpg)]([http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE](https://www.youtube.com/watch?v=RqDsRFgdvI0) "Proof of concept 'Operating System' designed in javascript")
+Video Demonstration = https://www.youtube.com/watch?v=RqDsRFgdvI0
 
 # Installation
 1. Clone this repository
