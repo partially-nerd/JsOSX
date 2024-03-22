@@ -6,6 +6,7 @@ An operating system programmed in javascript
 ![image](https://github.com/partially-nerd/JsOSX/assets/108736691/7f1c124e-7031-478d-8035-94a8a45b1853)
 
 [![Youtube Video](http://img.youtube.com/vi/RqDsRFgdvI0/0.jpg)]([http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE](https://www.youtube.com/watch?v=RqDsRFgdvI0) "Proof of concept 'Operating System' designed in javascript")
+
 Video Demonstration = https://www.youtube.com/watch?v=RqDsRFgdvI0
 
 # Installation
