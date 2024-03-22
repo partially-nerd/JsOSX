@@ -12,10 +12,11 @@ Video Demonstration = https://www.youtube.com/watch?v=RqDsRFgdvI0
 # Installation
 1. Clone this repository
 2. cd into it
-3. Run the server with npm run watch
-4. Launch the operating system with npm start
+3. Install Dependencies with `npm install`
+4. Run the server with `npm run watch`
+5. Launch the operating system with `npm start`
 
-*Note: If you run the server without the npm run watch, and directly, without certain flags, the user could leak out of the operating system into your host computer*
+*Note: If you run the server without the `npm run watch` command, and instead, manually, without certain flags, the user could leak out of the operating system into your host computer*
 
 # Keybinds
 1. Super + Enter => Launch Terminal
