@@ -8,8 +8,8 @@ An operating system programmed in javascript
 Video Demonstration = https://www.youtube.com/watch?v=RqDsRFgdvI0
 
 # Installation
-1. Clone this repository
-2. cd into it
+1. Clone this repository `git clone https://github.com/partially-nerd/JsOSX.git jsOSX`
+2. cd into it `cd jsOSX`
 3. Install Dependencies with `npm install`
 4. Run the server with `npm run watch`
 5. Launch the operating system with `npm start`
